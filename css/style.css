@@ -17,81 +17,17 @@ body {
 /*--------------------HEADER---------------------*/
 
 
-header {
+header nav {
     background-color: black;
-    padding: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-header h1 {
-
-    color: white;
-    font-size: 85px;
-    font-weight: 100;
+header nav i {
+    font-size: 65px;
 }
-
-header nav ul {
-    list-style: none;
-    display: flex;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-header nav ul li {
-
-    margin: 20px;
-}
-
 
 
 
 /*---------------------MAIN---------------------*/
-
-/*-------------VOY A PROBAR BOSTRAP EN LA IMG HERO---------
-    .hero {
-        width: 100%;
-        height: calc(100vh - 130px);
-        background-image: url(../img/fondoimg-hero.png);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat ;
-        color: white;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-*/
-
-.hero h1 {
-    font-size: 80px;
-
-    border: 5px;
-    padding: 15px;
-    margin-top: 70px;
-}
-
-.hero p {
-    font-size: 70px;
-    margin-top: 60px
-}
-
-
-.boton {
-    text-decoration: none;
-    font-size: 20px;
-    color: black;
-    background-color: white;
-    margin-top: 25px;
-
-}
-
 
 
 
@@ -102,6 +38,8 @@ header nav ul li {
 
 .pagos {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .pagos div img {
@@ -220,6 +158,179 @@ header nav ul li {
 
 
 
+/*----------------------------------------------NOSOTROS PAGE------------------------------------------*/
+
+
+.contenedor-nosotros{
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(1,2fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "section aside"
+    ;
+
+}
+
+.section-nosotros{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    grid-area: section;
+}
+
+.section-nosotros div span{
+    font-size: 20px;
+}
+
+.div-nosotros h2{
+    font-size: 30px;
+}
+
+.div-nosotros p{
+    font-size: 16px;
+    font-style: oblique;
+    font-weight: 500;
+}
+
+.aside-nosotros{
+    grid-area: aside;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.aside-nosotros div h2{
+    font-size: 50px;
+}
+
+.div-aside-nosotros p{
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: 500;
+}
+
+/*----------------------------------------------NOSOTROS GALERIA------------------------------------------*/
+
+.grid-galeria {
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 15px;
+}
+
+.grid-galeria div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-item {
+    box-shadow: 10px 10px 38px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 38px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 38px -4px rgba(0, 0, 0, 0.75);
+    position: relative;
+
+
+}
+
+.grid-item h3{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.675);
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.img-5 {
+    grid-row: span 2;
+}
+
+.img-6{
+    grid-row: span 2;
+}
+
+
+/*----------------------------------------------TALLES PAGE------------------------------------------*/
+
+
+.grid-talles{
+    color: black;
+    font-size: 20x;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding-top: 30px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    grid-template-rows: auto, auto, auto, auto;
+
+
+    grid-template-areas: 
+
+    "remera" "buzo" "skirt"
+    ;
+
+}
+
+
+
+.grid-item-1{
+    background-color: rgb(255, 255, 255);
+    grid-area: remera;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-item-1 p{
+    text-align: center;
+}
+
+.grid-item-1 img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.grid-item-2{
+    background-color: rgb(255, 255, 255);
+    grid-area: buzo;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-item-2 img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.grid-item-3{
+    background-color: rgb(255, 255, 255);
+    grid-area: skirt;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-item-3 img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+
 /*------------WHATSAPPFIJO--------*/
 
 .wspfixed img {
@@ -329,13 +440,13 @@ footer .redesfoot .redesflex {
     width: 359px;
 }
 
-.talles div .centerbuzo{
+.talles div .centerbuzo {
     padding-left: 150px;
     padding-top: 1px;
     padding-bottom: 10px;
 }
 
-.talles div .centerskirt{
+.talles div .centerskirt {
     padding-top: 1px;
     padding-bottom: 50px;
 }
@@ -355,4 +466,136 @@ footer .redesfoot .redesflex {
 .talles div p {
     padding-top: 2px;
     padding-bottom: 2px;
+}
+
+/*----------------------MEDIA QUERIES-------------------------------*/
+@media screen and (max-width:1400px){
+    
+    .section-nosotros img{
+        height: 500px;
+        width: 500px;
+    }
+
+    
+    .aside-nosotros div h2{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .aside-nosotros p{
+        display: none;
+    }
+
+    .wspfixed{
+        display: none;
+    }
+
+}
+
+
+
+
+@media screen and (max-width:1240px){
+    .pagos{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .section-nosotros img{
+        height: 400px;
+        width: 400px;
+        object-fit: cover;
+    }
+}
+
+
+@media screen and (max-width:1000px){
+
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerflex{
+        flex-direction: column;
+    }
+    .footerflex .redesflex{
+        align-content: center;
+        
+    }
+}
+
+
+@media screen and (max-width:950px){
+
+    .hero div img{
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+    }
+
+
+    .grid-galeria{
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: 220px ;
+    }
+
+    .grid-item{
+        grid-column: span 1;
+        grid-row: span 1;    
+    }
+
+    .img-6{
+        grid-row: span 2;
+    }
+
+    .wspfixed{
+        display: none;
+    }
+
+    .section-nosotros img{
+        display: none;
+    }
+
+    .aside-nosotros{
+        background-color: white;
+        margin-bottom: 20px;
+    }
+    .aside-nosotros div h2{
+        font-size: 45px;
+    }
+
+    .contenedor-nosotros{
+        display: flex;
+        flex-direction: column-reverse
+    }
+
+}
+
+
+@media screen and (max-width:515px){
+
+}
+
+
+@media screen and (max-width:450px){
+    .grid-galeria{
+        grid-template-columns: 1fr;
+    }
+
+    .aside-nosotros div h2{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .section-nosotros h2{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .section-nosotros div p{
+        font-size: 16px;
+        text-align: center;
+    }
 }
